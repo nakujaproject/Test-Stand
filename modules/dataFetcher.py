@@ -34,7 +34,6 @@ class FetchData(threading.Thread):
         time.sleep(2)
         while True:
             val = self._ser.readline().decode('utf-8').rstrip()
-            #val = random.randint(0,100)
             allPoints.append(val)
             time.sleep(0.0125)
             if self.stopped():
